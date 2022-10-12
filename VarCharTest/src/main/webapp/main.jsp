@@ -101,7 +101,7 @@
 										<div class="form-group mr-2">
 											<!-- <label for="" class="label">최소가격</label> -->
 											<!-- <input type="text" class="form-control" id="" placeholder="Date"> -->
-											<select name="pmin" class="form-control minSelect" id="">
+											<select name="price_min" class="form-control minSelect" id="">
 												<option>0</option>
 												<option>1000</option>
 												<option>2000</option>
@@ -123,7 +123,7 @@
 										<div class="form-group ml-2">
 											<!-- <label for="" class="label">최대가격</label> -->
 											<!-- <input type="text" class="form-control" id="" placeholder="Date"> -->
-											<select name="pmax" class="form-control maxSelect" id="">
+											<select name="price_max" class="form-control maxSelect" id="">
 												<option value="2147483647">전체</option>
 												<option>1000</option>
 												<option>2000</option>
@@ -155,7 +155,7 @@
 										<div class="form-group mr-2">
 											<!-- <label for="" class="label">최소가격</label> -->
 											<!-- <input type="text" class="form-control" id="" placeholder="Date"> -->
-											<select name="ymin" class="form-control minSelect" id="">
+											<select name="year_min" class="form-control minSelect" id="">
 												<option>2000</option>
 												<option>2001</option>
 												<option>2002</option>
@@ -184,7 +184,7 @@
 										<div class="form-group ml-2">
 											<!-- <label for="" class="label">최대가격</label> -->
 											<!-- <input type="text" class="form-control" id="" placeholder="Date"> -->
-											<select name="ymax" class="form-control maxSelect" id="">
+											<select name="year_max" class="form-control maxSelect" id="">
 												<option value="2023">전체</option>
 												<option>2001</option>
 												<option>2002</option>
@@ -515,9 +515,6 @@
 		</div>
 	</section>
 
-	<!-- <input type="hidden" id="chatId" /> -->
-	
-	<button onclick="chatWinOpen('${userId}');">채팅 참여</button>
 
 
 	<koala:fotter />
