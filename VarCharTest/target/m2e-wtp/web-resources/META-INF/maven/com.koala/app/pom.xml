@@ -40,7 +40,12 @@
 			<artifactId>activation</artifactId>
 			<version>1.1</version>
 		</dependency>
-
+		<!-- 웹소캣 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
 		<!--JSON 관련 -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>

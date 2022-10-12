@@ -247,7 +247,7 @@
 						<div class="card-header">
 							<i class="fas fa-table me-1"></i> Car Information
 						</div>
-						<div class="card-body">
+						<div class="card-body carTableContainer">
 							<table id="datatablesSimple1">
 								<thead>
 									<tr>
@@ -294,6 +294,8 @@
 										<th>userphone</th>
 										<th>useremail</th>
 									</tr>
+									</thead>
+									<tbody>
 									<c:forEach var="m" items="${mdata}">
 										<tr>
 											<td>${m.mid}</td>
@@ -305,7 +307,7 @@
 											<td>${m.memail}</td>
 										</tr>
 									</c:forEach>
-								</thead>
+								</tbody>
 							</table>
 						</div>
 					</div>
