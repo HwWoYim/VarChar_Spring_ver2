@@ -11,7 +11,8 @@
 - 회의록/자료공유 : Slack
 - 버전관리 : Git(SourceTree)
 - 회의 : Discord
-- 사용 언어 : HTML, CSS, JavaScript, Jquery, Java, Jsp,
+- 사용 언어 : HTML, CSS, JavaScript, Jquery, Java, Jsp
+- 프레임워크 : Spring
 
 💠주 기능
 - 필터검색
