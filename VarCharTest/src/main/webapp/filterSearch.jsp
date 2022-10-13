@@ -421,7 +421,7 @@
                   <span class="cat">${c.ckm} km</span>
                   <!-- 가격 인트 의 최댓값일때 == 상담 예약으로 변경-->
                   <c:choose>
-                     <c:when test="${c.cprice==2147483647}">
+                     <c:when test="${c.cprice >= 400000}">
                         <p class="price ml-auto">상담예약</p>
                      </c:when>
                      <c:otherwise>
@@ -640,7 +640,7 @@
                               newNode += "<span class='cat'>" + this.ckm + " km</span>";
                               
                               // 상담예약 상품의 가격 저장은 2147483647
-                              cprice = this.cprice == 2147483647 ? "상담예약" : this.cprice + "<span>만원</span>";
+                              cprice = this.cprice >= 400000 ? "상담예약" : this.cprice + "<span>만원</span>";
                               newNode += "<p class='price ml-auto'>" + cprice + "</p>";
                               
                               newNode += "</div>";

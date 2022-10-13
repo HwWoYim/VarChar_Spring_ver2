@@ -86,7 +86,7 @@
                 <!--가격, 찜목록 추가 버튼 추가-->
                 <div class="buyCar">
                    <c:choose>
-                      <c:when test="${data.cprice==2147483647}">
+                      <c:when test="${data.cprice >= 400000}">
                          <h2>상담 예약</h2>
                       </c:when>
                       <c:otherwise>
@@ -134,7 +134,7 @@
                     <h3 class="heading mb-0 pl-3">
                       가격
                       <c:choose>
-                         <c:when test="${data.cprice==2147483647}">
+                         <c:when test="${data.cprice >= 400000}">
                             <span>상담예약</span>
                          </c:when>
                          <c:otherwise>

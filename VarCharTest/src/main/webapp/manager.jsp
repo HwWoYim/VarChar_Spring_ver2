@@ -113,9 +113,9 @@
 													<c:if test="${data.cfuel == '전기'}">selected='selected'</c:if>>전기</option>
 										</select>
 										</li>
-										<li>주행거리<input class="dataTable-input" type="number" min="0"
+										<li>주행거리<input class="dataTable-input" type="number" min="0" step="1000" max="2147483600"
 											name="ckm" required value="${data.ckm}" autocomplete="off"></li>
-										<li>가격<input class="dataTable-input" type="number" min="0"
+										<li>가격<input class="dataTable-input" type="number" min="0" step="100" max="2147483600"
 											name="cprice" required value="${data.cprice}"
 											autocomplete="off"></li>
 										<li>지역<select name="ccity" class="dataTable-input">
@@ -206,10 +206,10 @@
 												<option>LPG</option>
 												<option>전기</option>
 										</select></li>
-										<li>주행거리<input class="dataTable-input" type="number" min="0"
+										<li>주행거리<input class="dataTable-input" type="number" min="0" step="1000" max="2147483600"
 											name="ckm" required autocomplete="off">
 										</li>
-										<li>가격<input class="dataTable-input" type="number" min="0"
+										<li>가격<input class="dataTable-input" type="number" min="0" step="100" max="2147483600"
 											name="cprice" required autocomplete="off"></li>
 										<li>지역<select name="ccity" class="dataTable-input">
 												<option>서울</option>

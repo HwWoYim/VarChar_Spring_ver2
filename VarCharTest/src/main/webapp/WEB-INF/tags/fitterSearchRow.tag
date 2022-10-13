@@ -23,7 +23,7 @@
                   <span class="cat">${c.ckm} km</span>
                   <!-- 가격 인트 의 최댓값일때 == 상담 예약으로 변경-->
                   <c:choose>
-                     <c:when test="${c.cprice==2147483647}">
+                     <c:when test="${c.cprice >= 400000}">
                         <p class="price ml-auto">상담예약</p>
                      </c:when>
                      <c:otherwise>

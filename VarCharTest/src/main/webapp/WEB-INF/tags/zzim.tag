@@ -21,7 +21,7 @@
       <c:forEach var="c" items="${sdatas}">
          <!-- 상담 예약이면 0으로변환 -->
          <c:choose>
-            <c:when test="${c.cprice!=2147483647}">
+            <c:when test="${c.cprice < 400000}">
                <c:set var="total" value="${total + c.cprice}" />
             </c:when>
             <c:otherwise>
@@ -38,7 +38,7 @@
 
                <span>연식 : ${c.cyear}</span> <span>연료 : ${c.cfuel}</span> <span>주행거리
                   : ${c.ckm}km</span> <span>지역 : ${c.ccity}</span> <span>가격 : <c:choose>
-                     <c:when test="${c.cprice==2147483647}">
+                     <c:when test="${c.cprice >= 400000}">
                     상담예약
                  </c:when>
                      <c:otherwise>

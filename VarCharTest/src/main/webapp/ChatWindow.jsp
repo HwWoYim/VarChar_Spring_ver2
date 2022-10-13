@@ -36,17 +36,17 @@
     <script>
     let webSocket
     = new WebSocket("<%= application.getInitParameter("CHAT_ADDR") %>/ChatingServer");
-    let chatWindow, chatMessage, chatId;
-    const messagesWrap = document.getElementById("messagesWrap");
+    let chatWindow, chatMessage, chatId; // 채팅창이 열리면 대화창, 메시지, 대화명으로 사용할 변수를 선언
+    const messagesWrap = document.getElementById("messagesWrap"); // ???????????????????????????????????????
     // 채팅창이 열리면 대화창, 메시지 입력창, 대화명 표시란으로 사용할 DOM 객체 저장
     window.onload = function() {
-        chatWindow = document.getElementById("messages");
-        chatMessage = document.getElementById("sender");
-      //  chatId = document.getElementById('chatId').value;
-        if(${userId != null}) {
-        	chatId = "${userId}";     	
+        chatWindow = document.getElementById("messages"); // 메시지 저장
+        chatMessage = document.getElementById("sender"); // 보낸 사람의 대화명 저장
+        /*chatId = document.getElementById('chatId').value;*/
+        if(${userId != null}) { // 세션에 저장되있는 사용자의 속성 값이 null이 아닌경우. 즉, 정상적으로 로그인이 되었다면
+        	chatId = "${userId}"; // 로그인한 사용자의 PK값 mid를 저장한다.
         }
-        else {
+        else { // 로그인 실패했다면
         	chatId = "unknown";
         }
     }
@@ -54,10 +54,10 @@
     function sendMessage() {
         // 대화창에 표시
         chatWindow.innerHTML += "<p class='chatText mychat'><span class='chatTextMsg'>" + chatMessage.value + "</span></p>"
-        webSocket.send(chatId + '|' + chatMessage.value);  // 서버로 전송
-        chatMessage.value = "";  // 메시지 입력창 내용 지우기
-     //   chatWindow.scrollTop = chatWindow.scrollHeight;  // 대화창 스크롤
-			 messagesWrap.scrollTop = messagesWrap.scrollHeight; 	
+        webSocket.send(chatId + '|' + chatMessage.value);  // '대화명|메시지' 형태로 가공 후 서버로 전송
+        chatMessage.value = "";  // 메시지를 전송한 후 입력창 비우기
+    /*chatWindow.scrollTop = chatWindow.scrollHeight;*/
+		messagesWrap.scrollTop = messagesWrap.scrollHeight; // 스크롤바는 항상 아래로 위치
     }
     // 서버와의 연결 종료
     function disconnect() {

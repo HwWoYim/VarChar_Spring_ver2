@@ -14,6 +14,7 @@
 	</servlet-mapping>
 
 	<!-- 웹소캣 시작 -->
+	<!-- 호스트:포트번호는 wifi에 따라 달라지므로 클라언트와 관리자가 동일한 ip포트번호로 일치시켜야한다. -->
 	<context-param>
 		<param-name>CHAT_ADDR</param-name>
 		<param-value>ws://172.30.1.32:8088/app</param-value>
