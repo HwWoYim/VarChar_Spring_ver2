@@ -422,7 +422,7 @@
                    </h5>                 
 
                         <span >
-                     오토벨 상세 진단서의 정보와 실제 차량 상태가 상이할 경우, 최대 150만원까지 보상해 드립니다.<br>
+                     VARCHAR 상세 진단서의 정보와 실제 차량 상태가 상이할 경우, 최대 150만원까지 보상해 드립니다.<br>
                      (구매 확정 후 3개월 이내, 주행거리 5,000km 이내 차량에 한함)
                         </span>
                   </div>
@@ -537,32 +537,10 @@
         <a href="main.do" class="btn btn-primary py-2 mr-1">메인으로가기</a>
  		</div>
    </section>
-<koala:fotter/>
+   
+<koala:footer/>
 
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
-    </div>
+  
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>

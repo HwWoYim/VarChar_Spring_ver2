@@ -14,7 +14,7 @@
         <div id="wrapperTop">
             <div id="varchar"><a href="maing.do" target="_blank">Var<span>char</span></a></div>
             <div id="TopCenter">상담</div>
-            <div id="finish"><button class="buttonStyle buttons" type="button" id="endChatBtn">종료하기</button></div>
+            <div id="finish"><button class="buttonStyle buttons" type="button" id="endChatBtn" onclick="disconnect();">종료하기</button></div>
         </div>
         <div id="messagesWrap">
             <div id="messages">
@@ -37,7 +37,7 @@
     let webSocket
     = new WebSocket("<%= application.getInitParameter("CHAT_ADDR") %>/ChatingServer");
     let chatWindow, chatMessage, chatId; // 채팅창이 열리면 대화창, 메시지, 대화명으로 사용할 변수를 선언
-    const messagesWrap = document.getElementById("messagesWrap"); // ???????????????????????????????????????
+    const messagesWrap = document.getElementById("messagesWrap"); // document.getElementById는 id요소에 접근하는 함수
     // 채팅창이 열리면 대화창, 메시지 입력창, 대화명 표시란으로 사용할 DOM 객체 저장
     window.onload = function() {
         chatWindow = document.getElementById("messages"); // 메시지 저장
@@ -91,13 +91,13 @@
         let sender = message[0];   // 보낸 사람의 대화명
         let content = message[1];  // 메시지 내용
         if (content != "") {
-            if (content.match("/")) {  // 귓속말
+            if (content.match("/")) {  // 귓속말 / match함수는 동일한 단어를 문자열에서 찾는 함수
                 if (content.match(("/" + chatId))) {  // 나에게 보낸 메시지만 출력
                    // let temp = content.replace(("/" + chatId), "[귓속말] : ");
                     let temp = content.replace(("/" + chatId), "");
                     chatWindow.innerHTML += "<p class='whoSends'><span>" + sender + "[귓속말]</span></p>";
                     chatWindow.innerHTML += "<p class='chatText'><span class='chatTextMsg whisperChat'>" + temp + "</span></p>";
-                }
+                }	
             }
             else {  // 일반 대화
                 chatWindow.innerHTML += "<p class='whoSends'><span>" + sender + "</span></p>";
