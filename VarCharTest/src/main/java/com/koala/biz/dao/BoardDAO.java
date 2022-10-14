@@ -40,6 +40,8 @@ public class BoardDAO {
 	final String sql_delete_R = "DELETE FROM CREPLY WHERE RID=?";
 	// 문의글 수정
 	final String sql_update = "UPDATE CBOARD SET BTITLE=?, CONTENT=?, WHERE BNUM=?";
+	// 문의글 댓글 수 올리기
+	final String sql_update_R = "UPDATE CREPLY SET RCNT=RCNT+1 WHERE BNUM=?";
 	// 문의글 상세보기- (문의글 게시판에서는 안씀) 
 	final String sql_selectOne = "SELECT * FROM CBOARD WHERE BNUM=?";
 	// 문의글 목록보기
@@ -99,7 +101,6 @@ public class BoardDAO {
 		int res= jdbcTemplate.update(sql_update,bvo.getBtitle(),bvo.getBcontent(),bvo.getBnum());
 		return res>0;
 	}
-
 	/////////////////////////////문의 글 상세보기////////////////////////////////////
 
 	public BoardVO selectOne(BoardVO bvo) {// vo로 인자값을 받아 유지보수 용이

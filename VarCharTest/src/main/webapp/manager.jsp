@@ -206,7 +206,7 @@
 												<option>LPG</option>
 												<option>전기</option>
 										</select></li>
-										<li>주행거리<input class="dataTable-input" type="number" min="0" step="1000" max="2147483600"
+										 <li>주행거리<input class="dataTable-input" type="number" min="0" step="1000" max="2147483600"
 											name="ckm" required autocomplete="off">
 										</li>
 										<li>가격<input class="dataTable-input" type="number" min="0" step="100" max="2147483600"

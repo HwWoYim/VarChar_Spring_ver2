@@ -174,7 +174,7 @@
 				<ul class="menuBox" id="boardSet">
 					<c:forEach var="b" items="${bList}" varStatus="status">
 						<c:set var="c" value="${b.boardVO}" />
-						<li><a href="#menu+${status.count}">${c.btitle}</a>
+						<li><a href="#menu+${status.count}">${c.btitle}[${b.rList.size()}]</a>
 						<koala:delete type="content" bnum="${c.bnum}" />
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="boardInfo">(${c.mid}님,&nbsp;&nbsp;&nbsp;${c.bdate})</span><i
 							class="openArrow"><img src="images/down_arrow.png" /></i>

@@ -5,6 +5,7 @@ public class ReplyVO {
 	private String mid;
 	private int bnum;
 	private String cmsg;
+	
 	public int getRid() {
 		return rid;
 	}
@@ -31,8 +32,9 @@ public class ReplyVO {
 	}
 	@Override
 	public String toString() {
-		return "Creply [rid=" + rid + ", mid=" + mid + ", bnum=" + bnum + ", cmsg=" + cmsg + "]";
+		return "ReplyVO [rid=" + rid + ", mid=" + mid + ", bnum=" + bnum + ", cmsg=" + cmsg + "]";
 	}
+	
 	
 	
 }

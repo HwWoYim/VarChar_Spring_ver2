@@ -37,7 +37,7 @@
        <button onclick="location.href='index.jsp'" id="errorMainGo">메인화면 이동</button >
 	</div>
     </div>
-   <koala:fotter/>
+   <koala:footer/>
     
    
 </body>

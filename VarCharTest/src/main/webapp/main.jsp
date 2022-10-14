@@ -8,6 +8,7 @@
 <html>
 <head>
 <title>VARCHAR</title>
+<!-- 파비콘 설정 -->
 <link rel="shortcut icon" href="./images/vc.ico">
 <meta charset="utf-8" />
 <meta name="viewport"
@@ -38,15 +39,21 @@
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/filterSearch.css" />
 
+<!-- jQuery CDN -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"
 	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
 	crossorigin="anonymous"></script>
 </head>
 <body>
-	<!-- 메뉴 커스텀 태그로 구현  -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+	<!-- 네비게이션 바 시작-->
 	<koala:nav />
+	<!-- 네비게이션 바 종료 -->
+	<!-- 찜하기 모달창 시작 -->
 	<koala:zzim />
-
+	<!-- 찜하기 모달창 종료 -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+	<!-- 상단 -->
 	<div class="hero-wrap ftco-degree-bg"
 		style="background-image: url('images/bg_1.jpg');"
 		data-stellar-background-ratio="0.5">
@@ -58,22 +65,14 @@
 					<div class="text w-100 text-center mb-md-5 pb-md-5">
 						<h1 class="mb-4">차를 아는 전문가가</h1>
 						<p class="topSubTitle">똑똑히 알려주는 전문시세</p>
-						<!-- 
-               <a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                     <span class="ion-ios-play"></span>
-                  </div>
-                  <div class="heading-title ml-5">
-                     <span>Easy steps for renting a car</span>
-                  </div>
-               </a>
-               -->
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
+	<!-- 상단 종료 -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+	<!-- 중앙 -->
 	<section class="ftco-section ftco-no-pt bg-light">
 		<div class="container">
 			<div class="row no-gutters">
@@ -81,26 +80,15 @@
 					<div class="row no-gutters">
 						<div class="col-md-4 d-flex align-items-center">
 
-
-
-							<!-- 메인 검색 필터 -->
+							<!-- 메인 검색 필터 시작 -->
 							<form action="filter.do"
 								class="request-form ftco-animate bg-primary mainFilterBox">
 								<h2 class="mainFilterTitle">내 차 찾아보기</h2>
-								<!-- <div class="form-group">
-                            <label for="" class="label">Pick-up location</label>
-                            <input type="text" class="form-control" placeholder="City, Airport, Station, etc">
-                         </div> -->
-
-
-
 								<!-- 가격 필터 -->
 								<div class="form-group">
 									<label for="" class="label">가격</label>
 									<div class="d-flex">
 										<div class="form-group mr-2">
-											<!-- <label for="" class="label">최소가격</label> -->
-											<!-- <input type="text" class="form-control" id="" placeholder="Date"> -->
 											<select name="price_min" class="form-control minSelect" id="">
 												<option>0</option>
 												<option>1000</option>
@@ -121,8 +109,6 @@
 											</select>
 										</div>
 										<div class="form-group ml-2">
-											<!-- <label for="" class="label">최대가격</label> -->
-											<!-- <input type="text" class="form-control" id="" placeholder="Date"> -->
 											<select name="price_max" class="form-control maxSelect" id="">
 												<option value="2147483647">전체</option>
 												<option>1000</option>
@@ -144,17 +130,12 @@
 										</div>
 									</div>
 								</div>
-								<!-- ----------------- -->
-
-
-
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
 								<!-- 주행거리 필터 -->
 								<div class="form-group">
 									<label for="" class="label">연식</label>
 									<div class="d-flex">
 										<div class="form-group mr-2">
-											<!-- <label for="" class="label">최소가격</label> -->
-											<!-- <input type="text" class="form-control" id="" placeholder="Date"> -->
 											<select name="year_min" class="form-control minSelect" id="">
 												<option>2000</option>
 												<option>2001</option>
@@ -182,8 +163,6 @@
 											</select>
 										</div>
 										<div class="form-group ml-2">
-											<!-- <label for="" class="label">최대가격</label> -->
-											<!-- <input type="text" class="form-control" id="" placeholder="Date"> -->
 											<select name="year_max" class="form-control maxSelect" id="">
 												<option value="2023">전체</option>
 												<option>2001</option>
@@ -212,14 +191,10 @@
 										</div>
 									</div>
 								</div>
-								<!-- ---------------------- -->
-
-
-
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
 								<!-- 연료 필터 -->
 								<div class="form-group mainFuelFilter">
 									<label for="" class="label">연료</label>
-									<!-- <input type="text" class="form-control" id="time_pick" placeholder="Time"> -->
 									<select name="fuel" class="form-control" id="">
 										<option selected>전체</option>
 										<option>가솔린</option>
@@ -227,10 +202,10 @@
 										<option>디젤</option>
 									</select>
 								</div>
-
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+								<!-- 지역 필터 -->
 								<div class="form-group mainRegionFilter">
 									<label for="" class="label">지역</label>
-									<!-- <input type="text" class="form-control" id="time_pick" placeholder="Time"> -->
 									<select name="city" class="form-control" id="">
 										<option selected>전체</option>
 										<option>서울</option>
@@ -252,8 +227,6 @@
 										<option>세종</option>
 									</select>
 								</div>
-								<!-- ----------------------- -->
-
 								<input type="hidden" name="min-value" value="1000" /> <input
 									type="hidden" name="max-value" value="700000" /> <input
 									type="hidden" name="sort" value="최신순" />
@@ -265,8 +238,9 @@
 								</div>
 							</form>
 						</div>
-
-						<!-- 메인 검색필터 끝 -->
+						<!-- 메인 검색필터 종료 -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+						<!-- 검색필터 우측 코멘트 박스 시작 -->
 						<div class="col-md-8 d-flex align-items-center">
 							<div class="services-wrap rounded-right w-100 mainService">
 								<h3 class="heading-section mb-4 startWithVarchar">VARCHAR와
@@ -312,11 +286,14 @@
 								</p>
 							</div>
 						</div>
+						<!-- 검색필터 우측 코멘트 박스 종료 -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
 					</div>
 				</div>
 			</div>
 	</section>
-	<!-- 원래는 최하단에 있었는데 css가 이쁘고 밑에있으면 티도 안나서 올렷습니다 -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+	<!-- VARCHAR 통계 시작 -->
 	<section class="ftco-counter ftco-section img bg-light"
 		id="section-counter">
 
@@ -361,6 +338,9 @@
 			</div>
 		</div>
 	</section>
+	<!-- VARCHAR 통계 종료 -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+	<!-- 최신 추가된 차량 슬라이더 시작 -->
 	<section class="ftco-section ftco-no-pt bg-light">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -380,31 +360,9 @@
 			</div>
 		</div>
 	</section>
-	<!-- -->
-
-	<!-- 여긴 필요하지 않을꺼같아 주석 처리 
-    <section class="ftco-section ftco-about">
-         <div class="container">
-            <div class="row no-gutters">
-               <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
-               </div>
-               <div class="col-md-6 wrap-about ftco-animate">
-             <div class="heading-section heading-section-white pl-md-5">
-                <span class="subheading">About us</span>
-               <h2 class="mb-4">Welcome to Carbook</h2>
-
-               <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-               <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-               <p><a href="#" class="btn btn-primary py-3 px-4">Search Vehicle</a></p>
-             </div>
-               </div>
-            </div>
-         </div>
-      </section>
--->
-
-
-
+	<!-- 최신 추가된 차량 슬라이더 종료 -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+	<!-- 중앙 하단 로그인,회원가입 안내 박스 시작 -->
 	<section class="ftco-section ftco-intro"
 		style="background-image: url(images/bg_3.jpg);">
 		<div class="overlay"></div>
@@ -425,82 +383,8 @@
 			</div>
 		</div>
 	</section>
-
-
-	<!-- 
-    <section class="ftco-section testimony-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center heading-section ftco-animate">
-             <span class="subheading">Testimonial</span>
-            <h2 class="mb-3">고객 문의 게시판</h2>
-          </div>
-        </div>
-        <div class="row ftco-animate">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel ftco-owl">
-              <div class="item">
-                <div class="testimony-wrap rounded text-center py-4 pb-5">
-                  <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
-                  </div>
-                  <div class="text pt-4">
-                    <p class="name">이준선</p>
-                    <p class="mb-4">차사는게 엄청 쉽더라구요</p>
-                    <span class="position">동내 백수</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap rounded text-center py-4 pb-5">
-                  <div class="user-img mb-2" style="background-image: url(images/person_2.jpg)">
-                  </div>
-                  <div class="text pt-4">
-                    <p class="mb-4">ㅎㅎ</p>
-                    <p class="name">김종현</p>
-                    <span class="position">god</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap rounded text-center py-4 pb-5">
-                  <div class="user-img mb-2" style="background-image: url(images/person_3.jpg)">
-                  </div>
-                  <div class="text pt-4">
-                    <p class="mb-4">차는 역시 현대차다 맨이야~</p>
-                    <p class="name">황지민</p>
-                    <span class="position">jo jang nim</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap rounded text-center py-4 pb-5">
-                  <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
-                  </div>
-                  <div class="text pt-4">
-                    <p class="mb-4">굿굿</p>
-                    <p class="name">김수연</p>
-                    <span class="position">수달</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap rounded text-center py-4 pb-5">
-                  <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
-                  </div>
-                  <div class="text pt-4">
-                    <p class="mb-4">여기 사이트 좋아여</p>
-                    <p class="name">이향준</p>
-                    <span class="position">근육mam~</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-     -->
-
+	<!-- 중앙 하단 로그인,회원가입 안내 박스 종료 -->
+	<!-- 최근 추가된 문의 글 3개 시작 -->
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5">
@@ -514,11 +398,12 @@
 			</div>
 		</div>
 	</section>
-
-
-
+	<!-- 최근 추가된 문의 글 3개 종료 -->
+	<!-- 중앙 종료 -->
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+	<!-- 하단 시작 -->
 	<koala:footer />
-
+	<!-- 하단 종료 -->
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>

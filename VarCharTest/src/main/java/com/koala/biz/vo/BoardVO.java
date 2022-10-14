@@ -10,18 +10,9 @@ public class BoardVO {
 	private String bdate;
 	private boolean res;			// 게시글 삭제 여부 true이면 전부삭제 false 이면 알수없음
 	private int cnt; //더보기용 cnt
-	
-
 
 	public int getBnum() {
 		return bnum;
-	}
-
-	@Override
-	public String toString() {
-		return "BoardVO [bnum=" + bnum + ", mid=" + mid + ", mnickname=" + mnickname + ", btitle=" + btitle
-				+ ", bcontent=" + bcontent + ", bcnt=" + bcnt + ", bdate=" + bdate + ", res=" + res + ", cnt=" + cnt
-				+ "]";
 	}
 
 	public void setBnum(int bnum) {
@@ -98,6 +89,15 @@ public class BoardVO {
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
 	}
+
+	@Override
+	public String toString() {
+		return "BoardVO [bnum=" + bnum + ", mid=" + mid + ", mnickname=" + mnickname + ", btitle=" + btitle
+				+ ", bcontent=" + bcontent + ", bcnt=" + bcnt + ", bdate=" + bdate + ", res=" + res + ", cnt=" + cnt
+				+  "]";
+	}
+	
+	
 	}
 	
 	

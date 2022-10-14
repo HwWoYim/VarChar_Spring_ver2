@@ -17,7 +17,7 @@
 	<!-- 호스트:포트번호는 공유기에 따라 달라지므로 클라언트와 관리자가 동일한 내부ip포트번호로 일치시켜야한다. -->
 	<context-param>
 		<param-name>CHAT_ADDR</param-name>
-		<param-value>ws://192.168.1.216:8088/app</param-value>
+		<param-value>ws://192.168.0.161:8088/app</param-value>
 	</context-param>
 	<!-- 웹소캣 종료 -->
 

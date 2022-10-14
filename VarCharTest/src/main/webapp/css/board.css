@@ -113,7 +113,7 @@ a {
 
 .menuBox li ul li {
   /* background: #ccc; */
-  font-size: 12px;
+  font-size: 17px;
 }
 
 .menuBox .boardInfo {
@@ -126,6 +126,9 @@ a {
   position: relative;
   transition: 0.1s;
   cursor: pointer;
+}
+.menuBox > li > a:first-child {
+	font-size: 22px;
 }
 
 .menuBox > li > a:hover {
